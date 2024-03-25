@@ -1,0 +1,227 @@
+main {
+    .cards {
+        .card {
+            &.human {
+                background: #ffd079;
+            }
+
+            &.unknown {
+                background: $white;
+
+                h2 {
+                    color: lighten($primary-color, 50%);
+                }
+            }
+
+            &.droid {
+                background: #FFD700;
+            }
+
+            &.wookie {
+                background: #644502;
+
+                h2 {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.rodian {
+                background: #4F9286;
+            }
+
+            &.hutt {
+                background: #40422C;
+
+                h2 span {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.yodas-species {
+                background: #83A888;
+            }
+
+            &.trandoshan {
+                background: #E5C86A;
+            }
+
+            &.mon-calamari {
+                background: #BC6B4D;
+            }
+
+            &.ewok {
+                background: #B55101;
+            }
+
+            &.sullustan {
+                background: #AF3519;
+            }
+
+            &.neimodian {
+                background: #4D443C;
+
+                h2 span {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.gungan {
+                background: #B0785F;
+            }
+
+            &.toydarian {
+                background: #618589;
+            }
+
+            &.dug {
+                background: #74854D;
+            }
+
+            &.zabrak {
+                background: #AB585A;
+            }
+
+            &.twilek {
+                background: #7396AA;
+            }
+
+            &.aleena {
+                background: #96AFB8;
+            }
+
+            &.vulptereen {
+                background: #455050;
+
+                h2 span {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.xexto {
+                background: #9CADAB;
+            }
+
+            &.toong {
+                background: #5B969D;
+            }
+
+            &.cerean {
+                background: #D0B085;
+            }
+
+            &.nautolan {
+                background: #607929;
+            }
+
+            &.tholothian {
+                background: #DA8A86;
+            }
+
+            &.iktotchi {
+                background: #4C4D66;
+
+                h2 span {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.quermian {
+                background: #C1721B;
+            }
+
+            &.kel-dor {
+                background: #893A1B;
+
+                h2 span {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.chagrian {
+                background: #5D76A0;
+            }
+
+            &.geonosian {
+                background: #A0A0A0;
+            }
+
+            &.mirialan {
+                background: #CBC76F;
+            }
+
+            &.clawdite {
+                background: #BBE87C;
+            }
+
+            &.besalisk {
+                background: #BB7150;
+            }
+
+            &.kaminoan {
+                background: #9BA0A4;
+            }
+
+            &.skakoan {
+                background: #3F7D65;
+            }
+
+            &.muun {
+                background: #A49089;
+            }
+
+            &.togruta {
+                background: #BD4113;
+
+                h2 span {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.kaleesh {
+                background: #9B422A;
+
+                h2 span {
+                    color: lighten($primary-color, 50%);
+                }
+
+                .info {
+                    color: darken($white, 10%)
+                }
+            }
+
+            &.pauan {
+                background: #83321B;
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #FFE81F;
+  font-size: 16px;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input {
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+input:focus {
+  outline: none;
+}
+
+header {
+  text-align: center;
+}
+header img {
+  max-width: 200px;
+}
+header h1 {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: none;
+  transition: all 0.3s ease;
+}
+.overlay.show {
+  display: block;
+}
+
+.additionalInformationCard {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  background-color: #fff;
+  color: #333;
+  z-index: 2;
+  padding: 1rem;
+  font-size: 1.25rem;
+  display: none;
+  transition: all 0.3s ease;
+}
+.additionalInformationCard h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 3rem;
+  color: #333;
+  text-align: center;
+}
+.additionalInformationCard h2 span {
+  font-weight: 500;
+  color: gray;
+}
+.additionalInformationCard.show {
+  display: block;
+}
+.additionalInformationCard.show .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.additionalInformationCard.show .close img {
+  width: 50px;
+}
+.additionalInformationCard.show .character {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  border: #b3b3b3 1px solid;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #FFE81F;
+  color: #333;
+}
+.additionalInformationCard.show .character div {
+  text-align: center;
+}
+.additionalInformationCard.show .character div strong {
+  font-size: 0.75rem;
+}
+.additionalInformationCard.show .apiinfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.additionalInformationCard.show .apiinfo div {
+  text-align: center;
+}
+.additionalInformationCard.show .apiinfo div strong {
+  font-size: 0.75rem;
+}
+.additionalInformationCard.show h3 {
+  text-align: center;
+}
+.additionalInformationCard.show .world {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+.additionalInformationCard.show .world div {
+  text-align: center;
+}
+.additionalInformationCard.show .world div strong {
+  font-size: 0.75rem;
+}
+
+main .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  grid-gap: 1rem;
+  position: relative;
+}
+main .cards .card {
+  color: #333;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+main .cards .card h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+main .cards .card h2 span {
+  color: #333;
+  font-weight: 500;
+}
+main .cards .card .info {
+  display: none;
+}
+main .cards .card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+main .cards .card:hover .info {
+  display: block;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  background: inherit;
+  padding: 2rem;
+  border-radius: 0 0 5px 5px;
+  transition: all 0.3s ease;
+}
+
+main .cards .card.human {
+  background: #ffd079;
+}
+main .cards .card.unknown {
+  background: #fff;
+}
+main .cards .card.unknown h2 {
+  color: #b3b3b3;
+}
+main .cards .card.droid {
+  background: #FFD700;
+}
+main .cards .card.wookie {
+  background: #644502;
+}
+main .cards .card.wookie h2 {
+  color: #b3b3b3;
+}
+main .cards .card.wookie .info {
+  color: #e6e6e6;
+}
+main .cards .card.rodian {
+  background: #4F9286;
+}
+main .cards .card.hutt {
+  background: #40422C;
+}
+main .cards .card.hutt h2 span {
+  color: #b3b3b3;
+}
+main .cards .card.hutt .info {
+  color: #e6e6e6;
+}
+main .cards .card.yodas-species {
+  background: #83A888;
+}
+main .cards .card.trandoshan {
+  background: #E5C86A;
+}
+main .cards .card.mon-calamari {
+  background: #BC6B4D;
+}
+main .cards .card.ewok {
+  background: #B55101;
+}
+main .cards .card.sullustan {
+  background: #AF3519;
+}
+main .cards .card.neimodian {
+  background: #4D443C;
+}
+main .cards .card.neimodian h2 span {
+  color: #b3b3b3;
+}
+main .cards .card.neimodian .info {
+  color: #e6e6e6;
+}
+main .cards .card.gungan {
+  background: #B0785F;
+}
+main .cards .card.toydarian {
+  background: #618589;
+}
+main .cards .card.dug {
+  background: #74854D;
+}
+main .cards .card.zabrak {
+  background: #AB585A;
+}
+main .cards .card.twilek {
+  background: #7396AA;
+}
+main .cards .card.aleena {
+  background: #96AFB8;
+}
+main .cards .card.vulptereen {
+  background: #455050;
+}
+main .cards .card.vulptereen h2 span {
+  color: #b3b3b3;
+}
+main .cards .card.vulptereen .info {
+  color: #e6e6e6;
+}
+main .cards .card.xexto {
+  background: #9CADAB;
+}
+main .cards .card.toong {
+  background: #5B969D;
+}
+main .cards .card.cerean {
+  background: #D0B085;
+}
+main .cards .card.nautolan {
+  background: #607929;
+}
+main .cards .card.tholothian {
+  background: #DA8A86;
+}
+main .cards .card.iktotchi {
+  background: #4C4D66;
+}
+main .cards .card.iktotchi h2 span {
+  color: #b3b3b3;
+}
+main .cards .card.iktotchi .info {
+  color: #e6e6e6;
+}
+main .cards .card.quermian {
+  background: #C1721B;
+}
+main .cards .card.kel-dor {
+  background: #893A1B;
+}
+main .cards .card.kel-dor h2 span {
+  color: #b3b3b3;
+}
+main .cards .card.kel-dor .info {
+  color: #e6e6e6;
+}
+main .cards .card.chagrian {
+  background: #5D76A0;
+}
+main .cards .card.geonosian {
+  background: #A0A0A0;
+}
+main .cards .card.mirialan {
+  background: #CBC76F;
+}
+main .cards .card.clawdite {
+  background: #BBE87C;
+}
+main .cards .card.besalisk {
+  background: #BB7150;
+}
+main .cards .card.kaminoan {
+  background: #9BA0A4;
+}
+main .cards .card.skakoan {
+  background: #3F7D65;
+}
+main .cards .card.muun {
+  background: #A49089;
+}
+main .cards .card.togruta {
+  background: #BD4113;
+}
+main .cards .card.togruta h2 span {
+  color: #b3b3b3;
+}
+main .cards .card.togruta .info {
+  color: #e6e6e6;
+}
+main .cards .card.kaleesh {
+  background: #9B422A;
+}
+main .cards .card.kaleesh h2 span {
+  color: #b3b3b3;
+}
+main .cards .card.kaleesh .info {
+  color: #e6e6e6;
+}
+main .cards .card.pauan {
+  background: #83321B;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .cards {
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  }
+  main .cards:hover .card {
+    transform: none;
+  }
+  main .cards:hover .card .info {
+    display: none;
+  }
+  .additionalInformationCard {
+    width: 70vw;
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 767px) {
+  main .cards {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+  .additionalInformationCard {
+    left: 0;
+    width: calc(100vw - 2rem);
+    overflow: scroll;
+  }
+  .additionalInformationCard.show .character {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .additionalInformationCard.show .apiinfo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .additionalInformationCard.show .world {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

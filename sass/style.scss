@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto&display=swap');
+
+$primary-color: #333;
+$secondary-color: #FFE81F;
+$black: #000000;
+$white: #fff;
+
+@import 'modules/__general';
+@import 'modules/__informationcard';
+@import 'modules/__cards';
+@import 'modules/__cardcolors';
+@import 'modules/__responsive';
