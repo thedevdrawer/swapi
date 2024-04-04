@@ -19,10 +19,6 @@ export default class API {
 					const data = await response.json();
 					const charactersData = await Promise.all(
 						data.results.map(async (character) => {
-							const speciesData = await this.getCharacterSpecies(
-								character.species
-							);
-							character.species = this.formatSpeciesData(speciesData);
 							return character;
 						})
 					);

@@ -1,7 +1,7 @@
 main {
     .cards {
         .card {
-            &.human {
+            &.species-1 {
                 background: #ffd079;
             }
 
@@ -13,15 +13,15 @@ main {
                 }
             }
 
-            &.droid {
+            &.species-2 {
                 background: #FFD700;
             }
 
-            &.wookie {
+            &.species-3 {
                 background: #644502;
 
-                h2 {
-                    color: lighten($primary-color, 50%);
+                h2 span{
+                    color: lighten($primary-color, 90%);
                 }
 
                 .info {
@@ -29,11 +29,11 @@ main {
                 }
             }
 
-            &.rodian {
+            &.species-4 {
                 background: #4F9286;
             }
 
-            &.hutt {
+            &.species-5 {
                 background: #40422C;
 
                 h2 span {
@@ -45,27 +45,27 @@ main {
                 }
             }
 
-            &.yodas-species {
+            &.species-6 {
                 background: #83A888;
             }
 
-            &.trandoshan {
+            &.species-7 {
                 background: #E5C86A;
             }
 
-            &.mon-calamari {
+            &.species-8 {
                 background: #BC6B4D;
             }
 
-            &.ewok {
+            &.species-9 {
                 background: #B55101;
             }
 
-            &.sullustan {
+            &.species-10 {
                 background: #AF3519;
             }
 
-            &.neimodian {
+            &.species-11 {
                 background: #4D443C;
 
                 h2 span {
@@ -77,31 +77,31 @@ main {
                 }
             }
 
-            &.gungan {
+            &.species-12 {
                 background: #B0785F;
             }
 
-            &.toydarian {
+            &.species-13 {
                 background: #618589;
             }
 
-            &.dug {
+            &.species-14 {
                 background: #74854D;
             }
 
-            &.zabrak {
+            &.species-15 {
                 background: #AB585A;
             }
 
-            &.twilek {
+            &.species-16 {
                 background: #7396AA;
             }
 
-            &.aleena {
+            &.species-17 {
                 background: #96AFB8;
             }
 
-            &.vulptereen {
+            &.species-18 {
                 background: #455050;
 
                 h2 span {
@@ -113,27 +113,27 @@ main {
                 }
             }
 
-            &.xexto {
+            &.species-19 {
                 background: #9CADAB;
             }
 
-            &.toong {
+            &.species-20 {
                 background: #5B969D;
             }
 
-            &.cerean {
+            &.species-21 {
                 background: #D0B085;
             }
 
-            &.nautolan {
+            &.species-22 {
                 background: #607929;
             }
 
-            &.tholothian {
+            &.species-23 {
                 background: #DA8A86;
             }
 
-            &.iktotchi {
+            &.species-24 {
                 background: #4C4D66;
 
                 h2 span {
@@ -145,11 +145,11 @@ main {
                 }
             }
 
-            &.quermian {
+            &.species-25 {
                 background: #C1721B;
             }
 
-            &.kel-dor {
+            &.species-26 {
                 background: #893A1B;
 
                 h2 span {
@@ -161,39 +161,39 @@ main {
                 }
             }
 
-            &.chagrian {
+            &.species-27 {
                 background: #5D76A0;
             }
 
-            &.geonosian {
+            &.species-28 {
                 background: #A0A0A0;
             }
 
-            &.mirialan {
+            &.species-29 {
                 background: #CBC76F;
             }
 
-            &.clawdite {
+            &.species-30 {
                 background: #BBE87C;
             }
 
-            &.besalisk {
+            &.species-31 {
                 background: #BB7150;
             }
 
-            &.kaminoan {
+            &.species-32 {
                 background: #9BA0A4;
             }
 
-            &.skakoan {
+            &.species-33 {
                 background: #3F7D65;
             }
 
-            &.muun {
+            &.species-34 {
                 background: #A49089;
             }
 
-            &.togruta {
+            &.species-35 {
                 background: #BD4113;
 
                 h2 span {
@@ -205,7 +205,7 @@ main {
                 }
             }
 
-            &.kaleesh {
+            &.species-36 {
                 background: #9B422A;
 
                 h2 span {
@@ -217,7 +217,7 @@ main {
                 }
             }
 
-            &.pauan {
+            &.species-37 {
                 background: #83321B;
             }
 

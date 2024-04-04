@@ -171,8 +171,12 @@ export default class Cards {
 		}
 
 		// format the species to be used as a css class name
-		const species = character.species.toLowerCase().replace(/\s/g, "-");
-		character.formattedSpecies = species.replace(/'/g, "");
+		let species = 'unknown';
+		if (character.species[0]) {
+			const speciesId = character.species[0].split('/').filter(Boolean).pop();
+			species = `species-${speciesId}`;
+		}
+		character.formattedSpecies = species;
 
 		// format the URL to return the character ID
 		const id = character.url.split("/")[5];
