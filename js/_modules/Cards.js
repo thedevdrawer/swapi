@@ -44,7 +44,7 @@ export default class Cards {
 			if (card) {
 				const character = this.api.getSingleCharacter(card.dataset.id);
 				const additionalInformation = document.querySelector(
-					".additionalInformationCard"
+					".popup"
 				);
 
 				character.then((data) => {

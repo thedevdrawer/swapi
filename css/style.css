@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto&display=swap);
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -7,6 +7,8 @@ body {
   color: #FFE81F;
   font-size: 16px;
   padding: 1rem;
+  background-image: url(/img/bg.jpg);
+  background-attachment: fixed;
 }
 
 h1,
@@ -38,6 +40,8 @@ input:focus {
 
 header {
   text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 header img {
   max-width: 200px;
@@ -64,8 +68,8 @@ header h1 {
   display: block;
 }
 
-.additionalInformationCard {
-  display: block;
+.popup {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -76,33 +80,32 @@ header h1 {
   z-index: 2;
   padding: 1rem;
   font-size: 1.25rem;
-  display: none;
   transition: all 0.3s ease;
 }
-.additionalInformationCard h2 {
+.popup h2 {
   font-size: 3rem;
   text-transform: uppercase;
   line-height: 3rem;
   color: #333;
   text-align: center;
 }
-.additionalInformationCard h2 span {
+.popup h2 span {
   font-weight: 500;
   color: gray;
 }
-.additionalInformationCard.show {
+.popup.show {
   display: block;
 }
-.additionalInformationCard.show .close {
+.popup.show .close {
   position: absolute;
   top: 1rem;
   right: 1rem;
   cursor: pointer;
 }
-.additionalInformationCard.show .close img {
+.popup.show .close img {
   width: 50px;
 }
-.additionalInformationCard.show .character {
+.popup.show .character {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
@@ -112,38 +115,46 @@ header h1 {
   background-color: #FFE81F;
   color: #333;
 }
-.additionalInformationCard.show .character div {
+.popup.show .character div {
   text-align: center;
 }
-.additionalInformationCard.show .character div strong {
+.popup.show .character div strong {
   font-size: 0.75rem;
 }
-.additionalInformationCard.show .apiinfo {
+.popup.show .apiinfo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }
-.additionalInformationCard.show .apiinfo div {
+.popup.show .apiinfo div {
   text-align: center;
 }
-.additionalInformationCard.show .apiinfo div strong {
+.popup.show .apiinfo div strong {
   font-size: 0.75rem;
 }
-.additionalInformationCard.show h3 {
+.popup.show h3 {
   text-align: center;
 }
-.additionalInformationCard.show .world {
+.popup.show .world {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
 }
-.additionalInformationCard.show .world div {
+.popup.show .world div {
   text-align: center;
 }
-.additionalInformationCard.show .world div strong {
+.popup.show .world div strong {
   font-size: 0.75rem;
 }
 
+main .loadingIcon {
+  text-align: center;
+  color: #FFE81F;
+  margin: 5vh auto;
+}
+main .loadingIcon svg {
+  display: block;
+}
 main .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
@@ -194,7 +205,7 @@ main .cards .card:hover .info {
   transition: all 0.3s ease;
 }
 
-main .cards .card.human {
+main .cards .card.species-1 {
   background: #ffd079;
 }
 main .cards .card.unknown {
@@ -203,160 +214,160 @@ main .cards .card.unknown {
 main .cards .card.unknown h2 {
   color: #b3b3b3;
 }
-main .cards .card.droid {
+main .cards .card.species-2 {
   background: #FFD700;
 }
-main .cards .card.wookie {
+main .cards .card.species-3 {
   background: #644502;
 }
-main .cards .card.wookie h2 {
-  color: #b3b3b3;
+main .cards .card.species-3 h2 span {
+  color: white;
 }
-main .cards .card.wookie .info {
+main .cards .card.species-3 .info {
   color: #e6e6e6;
 }
-main .cards .card.rodian {
+main .cards .card.species-4 {
   background: #4F9286;
 }
-main .cards .card.hutt {
+main .cards .card.species-5 {
   background: #40422C;
 }
-main .cards .card.hutt h2 span {
+main .cards .card.species-5 h2 span {
   color: #b3b3b3;
 }
-main .cards .card.hutt .info {
+main .cards .card.species-5 .info {
   color: #e6e6e6;
 }
-main .cards .card.yodas-species {
+main .cards .card.species-6 {
   background: #83A888;
 }
-main .cards .card.trandoshan {
+main .cards .card.species-7 {
   background: #E5C86A;
 }
-main .cards .card.mon-calamari {
+main .cards .card.species-8 {
   background: #BC6B4D;
 }
-main .cards .card.ewok {
+main .cards .card.species-9 {
   background: #B55101;
 }
-main .cards .card.sullustan {
+main .cards .card.species-10 {
   background: #AF3519;
 }
-main .cards .card.neimodian {
+main .cards .card.species-11 {
   background: #4D443C;
 }
-main .cards .card.neimodian h2 span {
+main .cards .card.species-11 h2 span {
   color: #b3b3b3;
 }
-main .cards .card.neimodian .info {
+main .cards .card.species-11 .info {
   color: #e6e6e6;
 }
-main .cards .card.gungan {
+main .cards .card.species-12 {
   background: #B0785F;
 }
-main .cards .card.toydarian {
+main .cards .card.species-13 {
   background: #618589;
 }
-main .cards .card.dug {
+main .cards .card.species-14 {
   background: #74854D;
 }
-main .cards .card.zabrak {
+main .cards .card.species-15 {
   background: #AB585A;
 }
-main .cards .card.twilek {
+main .cards .card.species-16 {
   background: #7396AA;
 }
-main .cards .card.aleena {
+main .cards .card.species-17 {
   background: #96AFB8;
 }
-main .cards .card.vulptereen {
+main .cards .card.species-18 {
   background: #455050;
 }
-main .cards .card.vulptereen h2 span {
+main .cards .card.species-18 h2 span {
   color: #b3b3b3;
 }
-main .cards .card.vulptereen .info {
+main .cards .card.species-18 .info {
   color: #e6e6e6;
 }
-main .cards .card.xexto {
+main .cards .card.species-19 {
   background: #9CADAB;
 }
-main .cards .card.toong {
+main .cards .card.species-20 {
   background: #5B969D;
 }
-main .cards .card.cerean {
+main .cards .card.species-21 {
   background: #D0B085;
 }
-main .cards .card.nautolan {
+main .cards .card.species-22 {
   background: #607929;
 }
-main .cards .card.tholothian {
+main .cards .card.species-23 {
   background: #DA8A86;
 }
-main .cards .card.iktotchi {
+main .cards .card.species-24 {
   background: #4C4D66;
 }
-main .cards .card.iktotchi h2 span {
+main .cards .card.species-24 h2 span {
   color: #b3b3b3;
 }
-main .cards .card.iktotchi .info {
+main .cards .card.species-24 .info {
   color: #e6e6e6;
 }
-main .cards .card.quermian {
+main .cards .card.species-25 {
   background: #C1721B;
 }
-main .cards .card.kel-dor {
+main .cards .card.species-26 {
   background: #893A1B;
 }
-main .cards .card.kel-dor h2 span {
+main .cards .card.species-26 h2 span {
   color: #b3b3b3;
 }
-main .cards .card.kel-dor .info {
+main .cards .card.species-26 .info {
   color: #e6e6e6;
 }
-main .cards .card.chagrian {
+main .cards .card.species-27 {
   background: #5D76A0;
 }
-main .cards .card.geonosian {
+main .cards .card.species-28 {
   background: #A0A0A0;
 }
-main .cards .card.mirialan {
+main .cards .card.species-29 {
   background: #CBC76F;
 }
-main .cards .card.clawdite {
+main .cards .card.species-30 {
   background: #BBE87C;
 }
-main .cards .card.besalisk {
+main .cards .card.species-31 {
   background: #BB7150;
 }
-main .cards .card.kaminoan {
+main .cards .card.species-32 {
   background: #9BA0A4;
 }
-main .cards .card.skakoan {
+main .cards .card.species-33 {
   background: #3F7D65;
 }
-main .cards .card.muun {
+main .cards .card.species-34 {
   background: #A49089;
 }
-main .cards .card.togruta {
+main .cards .card.species-35 {
   background: #BD4113;
 }
-main .cards .card.togruta h2 span {
+main .cards .card.species-35 h2 span {
   color: #b3b3b3;
 }
-main .cards .card.togruta .info {
+main .cards .card.species-35 .info {
   color: #e6e6e6;
 }
-main .cards .card.kaleesh {
+main .cards .card.species-36 {
   background: #9B422A;
 }
-main .cards .card.kaleesh h2 span {
+main .cards .card.species-36 h2 span {
   color: #b3b3b3;
 }
-main .cards .card.kaleesh .info {
+main .cards .card.species-36 .info {
   color: #e6e6e6;
 }
-main .cards .card.pauan {
+main .cards .card.species-37 {
   background: #83321B;
 }
 
@@ -370,7 +381,7 @@ main .cards .card.pauan {
   main .cards:hover .card .info {
     display: none;
   }
-  .additionalInformationCard {
+  .popup {
     width: 70vw;
     overflow: scroll;
   }
@@ -379,18 +390,18 @@ main .cards .card.pauan {
   main .cards {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   }
-  .additionalInformationCard {
+  .popup {
     left: 0;
     width: calc(100vw - 2rem);
     overflow: scroll;
   }
-  .additionalInformationCard.show .character {
+  .popup.show .character {
     grid-template-columns: repeat(2, 1fr);
   }
-  .additionalInformationCard.show .apiinfo {
+  .popup.show .apiinfo {
     grid-template-columns: repeat(1, 1fr);
   }
-  .additionalInformationCard.show .world {
+  .popup.show .world {
     grid-template-columns: repeat(2, 1fr);
   }
 }
